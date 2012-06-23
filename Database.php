@@ -4,9 +4,8 @@
 * Defination : Database operations
 * Audiance : Developers
 * Contact Me : nirav.trivedi29@gmail.com
-* Contact Subject : "From PHPClasses.org" <your subject line>
+* Contact Subject : "From GITHub" <your subject line>
 * Free to use , modify and re-distribute it.
-* Only one request please keep my creadit.
 */
 class Database{
 	var $order_by = '';
