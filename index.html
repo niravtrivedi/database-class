@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Database-class - PHP-MySQL : Database CRUD is now simple and quicker." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Database-class - PHP-MySQL</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/niravtrivedi/database-class">View on GitHub</a>
+
+          <h1 id="project_title">Database-class - PHP-MySQL</h1>
+          <h2 id="project_tagline">Database CRUD is now simple and quicker.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/niravtrivedi/database-class/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/niravtrivedi/database-class/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>Welcome to database - class.</h3>
+
+<p>This my first contribution to world.</p>
+
+<p>Database class are collection of various function makes data manipulation easy with database.It is very simple to configure/installation and easily embed with your code.</p>
+
+<p>Below some steps for using database-class.</p>
+
+<p>Installation /Configure ::
+Step 1: Create MySQL connection
+Step 2: Include Database.php file after connection
+Step 2: Create Object that's It :)</p>
+
+<h4>Config</h4>
+
+<hr><p>include "config.php"; //include connection file here
+include_once "Database.php"; //you  can define connection class in Database.php
+$db = new Database(); </p>
+
+<h4>Insert Example</h4>
+
+<hr><p>$post = array('field'=&gt;'value','field1'=&gt;'value');
+$db-&gt;insert('table_name',$post);
+echo "Inseted Row ID is :: ".$db-&gt;InserId;
+echo "<br>";</p>
+
+<h4>Select Example</h4>
+
+<hr><p>$db-&gt;select('users');
+while($r=$db-&gt;fetch()){
+     echo $r['email_user'];
+     echo "<br>";
+}
+echo "Total Rows : ", $db-&gt;NumRows();</p>
+
+<h4>Select with where</h4>
+
+<h4>You can use various conditions here such as like , regexp and etc...</h4>
+
+<hr><p>$db-&gt;select('table_name','*','condition = "match_peference"');
+$r = $db-&gt;fetch();</p>
+
+<h4>With where condition as array concate with AND,OR and Other</h4>
+
+<hr><p>$whr=array('AND'=&gt;array('f1'=&gt;'m1','f2'=&gt;'v2'));
+$db-&gt;select('table_name','*',$whr);
+$r=$db-&gt;fetch();</p>
+
+<h4>Select with different MySQL Clause (Order by , group by ,limit , start examples)</h4>
+
+<hr><p>$db-&gt;order_by = 'id ASC';
+ $db-&gt;start = 2;
+ $db-&gt;limit = 4;
+ $db-&gt;group_by = 'email_user';
+ $db-&gt;select('users');
+     while($r=$db-&gt;fetch()){
+          echo $r['email_user'];
+           echo "<br>";
+     }
+  echo "Total Rows : ", $db-&gt;NumRows();</p>
+
+<h4>Update records</h4>
+
+<hr><p>$post = array('field_name'=&gt;'value');
+$db-&gt;update('table_name',$post,'id = "match_pref"');
+echo "Affected Rows : ", $db-&gt;affected;</p>
+
+<h4>Get total rows count //without condition</h4>
+
+<hr><p>echo  "Total Rows : ",$db-&gt;Count('table_name');</p>
+
+<h4>Get total rows count by condition</h4>
+
+<hr><p>echo  "Total Rows : ",$db-&gt;Count('table_name','condition = "mactch"');</p>
+
+<h4>Row count with group by</h4>
+
+<hr><p>$db-&gt;group_by = 'field_name';
+echo  "Total Rows Group by : ",$db-&gt;Count('users');</p>
+
+<p>You can rich by <a href="mailto:nirav.trivedi29@gmail.com">nirav.trivedi29@gmail.com</a>.</p>
+
+<p>Thanks</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Database-class - PHP-MySQL maintained by <a href="https://github.com/niravtrivedi">niravtrivedi</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("<script type="text/javascript">    var _gaq = _gaq || [];   _gaq.push(['_setAccount', 'UA-33187207-1']);   _gaq.push(['_setDomainName', 'github.com']);   _gaq.push(['_trackPageview']);    (function() {     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);   })();  </script>");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
